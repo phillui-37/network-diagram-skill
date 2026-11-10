@@ -111,7 +111,7 @@ for (const icon of iconImages.values()) {
 }
 const iconCount = inv.nodes.length + inv.nodes.reduce((sum, n) => sum + n.services.length, 0);
 assert.equal((svg.match(/<image /g) || []).length, iconCount, 'Missing embedded device/service icons');
-const license = await readFile(path.join(packageRoot, 'assets/ICONS-LICENSE.txt'), 'utf8');
+const license = (await readFile(path.join(packageRoot, 'assets/ICONS-LICENSE.txt'), 'utf8')).replaceAll('\r\n', '\n');
 svg = svg.replace(/<svg\b[^>]*>/, tag => tag + '\n<metadata id="lucide-license">' + esc(license) + '</metadata>');
 for (const n of inv.nodes) assert(svg.includes(esc(n.name)), 'Missing node in SVG: ' + n.name);
 const image = new Resvg(svg, {font:{defaultFontFamily:'Arial',loadSystemFonts:true}}).render();
