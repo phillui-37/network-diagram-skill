@@ -12,7 +12,7 @@
     "@viz-js/viz": "3.31.0",
     "yaml": "2.9.1"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Portable YAML network diagrams with Graphviz WASM, themes and offline icons",
   "engines": {
     "node": ">=22"

@@ -50,7 +50,8 @@ together. Use --theme paper for the light palette and --help for arguments.
 [references.md](references.md) describes the schema and optional layout constraints.
 
 Icons are embedded in SVG; rendering and viewing need no icon CDN after npm ci.
---check normalizes SVG line endings and compares PNG bytes in the same font
+License metadata is normalized before embedding, including after a Windows Git
+checkout. --check normalizes SVG line endings and compares PNG bytes in the same font
 environment. Fonts can change PNG output between machines. Windows execution is
 verified; other operating systems have not been executed for this publication.
 
