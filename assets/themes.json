@@ -1,0 +1,38 @@
+{
+  "night": {
+    "background": "#0b1018",
+    "panel": "#111c2b",
+    "header": "#1c2e46",
+    "border": "#334a63",
+    "text": "#e5edf7",
+    "muted": "#9aadc3",
+    "accent": "#65d9c4",
+    "states": {
+      "reported": "#70d6a3",
+      "configured": "#75baff",
+      "proposed": "#e5c77a",
+      "optional": "#bca0f5",
+      "unknown": "#a2afbd",
+      "deferred": "#dcab82",
+      "candidate": "#e5c77a"
+    }
+  },
+  "paper": {
+    "background": "#f5f3ee",
+    "panel": "#ffffff",
+    "header": "#e1ebf4",
+    "border": "#a7b5c4",
+    "text": "#162538",
+    "muted": "#4c6076",
+    "accent": "#146859",
+    "states": {
+      "reported": "#186b45",
+      "configured": "#1c599c",
+      "proposed": "#795a14",
+      "optional": "#6c4597",
+      "unknown": "#566373",
+      "deferred": "#8b4b1f",
+      "candidate": "#795a14"
+    }
+  }
+}

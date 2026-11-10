@@ -1,0 +1,42 @@
+meta:
+  title: EXAMPLE / TEAM NETWORK
+  subtitle: Fictional example — not discovered infrastructure
+  source: Example design brief
+  notes:
+    - Dashed connections are design intent, not verified physical cabling.
+theme: night
+zones:
+  - {id: hosted, label: HOSTED SERVICES}
+  - {id: office, label: OFFICE DEVICES}
+nodes:
+  - id: front
+    icon: cloud
+    zone: hosted
+    name: Demo entry service
+    hardware: Virtual machine / capacity undecided
+    os: Example Linux
+    services:
+      - {name: Entry gateway, icon: route, state: optional}
+  - id: worker
+    icon: server
+    zone: office
+    name: Demo build server
+    hardware: Example CPU / memory unmeasured
+    os: Example Linux
+    services:
+      - {name: Build worker, icon: container, state: proposed}
+  - id: desk
+    icon: laptop
+    zone: office
+    name: Demo workstation
+    hardware: Example laptop
+    os: OS not specified
+    services:
+      - {name: Development tools, icon: code-xml, state: proposed}
+edges:
+  - {from: front, to: worker, label: Optional authenticated access, state: optional}
+  - {from: desk, to: worker, label: Logical office link / unverified, state: unknown}
+layout:
+  ranks:
+    - [worker, desk]
+  footer_after: [worker, desk]
